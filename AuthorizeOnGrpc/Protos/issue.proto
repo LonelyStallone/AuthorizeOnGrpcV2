@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "AuthorizeOnGrpc";
+
+package issue;
+
+service IssueService {
+  rpc Issue (IssueRequest) returns (IssueReply);
+}
+
+message IssueRequest {
+  string name = 1;
+}
+
+message IssueReply {
+  string message = 1;
+}
